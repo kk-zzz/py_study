@@ -82,4 +82,10 @@ print('abc'.isalpha()) # True
 print('abc123'.isalnum()) # True
 print('abc_'.isalnum()) # False
 
+# encode & decode
+name = '张张'
+encode_name = name.encode()
+print(f'encode {name}: {encode_name}') # encode 张张: b'\xe5\xbc\xa0\xe5\xbc\xa0'
+print(f'{name} length: {len(name)}') # 张张 length: 2
+
 
