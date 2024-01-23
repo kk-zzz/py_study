@@ -58,6 +58,11 @@ def analyze_movies():
       # print(f'tmp: {movies_by_year}')
     
     # 按年份从大到小排序
+    '''
+    lambda x: x[0] 是一个匿名函数，告诉 `sorted()` 函数根据列表中每个子列表的第三个元素（即日期）来排序。
+    `reverse=True` 表示进行降序排列（最新日期排在前面）
+    '''
+    # sorted_movies_by_year = {year: sorted(movies,  key=lambda x: x[2], reverse=True) for year, movies in sorted(movies_by_year.items(), key=lambda x: x[0], reverse=True)}
     sorted_movies_by_year = {year: movies for year, movies in sorted(movies_by_year.items(), key=lambda x: x[0], reverse=True)}
     print(f'sorted_movies_from_big_to_small: {sorted_movies_by_year}')
 
